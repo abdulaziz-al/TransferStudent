@@ -31543,8 +31543,6 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-Vue.component('test', __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module './components/Test.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()))["default"]);
-Vue.component('navbar', __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module './components/navbar.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()))["default"]);
 var app = new Vue({
   el: '#app'
 });
