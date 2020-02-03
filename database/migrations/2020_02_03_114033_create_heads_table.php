@@ -14,7 +14,14 @@ class CreateHeadsTable extends Migration
     public function up()
     {
         Schema::create('heads', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->engine = 'InnoDB';
+
+            $table->increments('id');
+            
+            $table->integer('head_id')->unsigned()->index();
+            $table->foreign('head_id')->references('id')->on('users')->onDelete('cascade');
+ 
+            $table->string('phone')->nullable();
             $table->timestamps();
         });
     }

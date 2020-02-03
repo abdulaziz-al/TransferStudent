@@ -14,7 +14,12 @@ class CreateLocationsTable extends Migration
     public function up()
     {
         Schema::create('locations', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->engine = 'InnoDB';
+
+            $table->increments('id');
+            $table->string('branch');
+            $table->string('lives');
+            
             $table->timestamps();
         });
     }

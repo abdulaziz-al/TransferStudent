@@ -14,7 +14,15 @@ class CreateBackgroundsTable extends Migration
     public function up()
     {
         Schema::create('backgrounds', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->engine = 'InnoDB';
+
+            $table->increments('id');
+            $table->integer('stu_id')->unsigned()->index();
+            $table->foreign('stu_id')->references('id')->on('students')->onDelete('cascade');
+            $table->string('path');
+ 
+
+            
             $table->timestamps();
         });
     }

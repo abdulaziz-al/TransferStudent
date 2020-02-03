@@ -14,7 +14,16 @@ class CreateHeadOfDepartmentsTable extends Migration
     public function up()
     {
         Schema::create('head_of_departments', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->engine = 'InnoDB';
+
+            $table->increments('id');
+            $table->integer('head_id')->unsigned()->index();
+            $table->foreign('head_id')->references('id')->on('heads')->onDelete('cascade');
+ 
+            $table->integer('department_id')->unsigned()->index();
+            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
+  
+            
             $table->timestamps();
         });
     }

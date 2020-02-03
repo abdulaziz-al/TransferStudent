@@ -14,7 +14,13 @@ class CreateDefualtsTable extends Migration
     public function up()
     {
         Schema::create('defualts', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->engine = 'InnoDB';
+
+            $table->increments('id');
+            $table->float('GPA');
+            $table->integer('defualt_sites');
+            
+            
             $table->timestamps();
         });
     }
