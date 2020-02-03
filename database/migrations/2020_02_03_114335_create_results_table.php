@@ -14,7 +14,20 @@ class CreateResultsTable extends Migration
     public function up()
     {
         Schema::create('results', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->engine = 'InnoDB';
+
+            $table->increments('id');
+            $table->integer('stu_id')->unsigned()->index();
+            $table->foreign('stu_id')->references('id')->on('students')->onDelete('cascade');
+ 
+            
+            $table->integer('department_id')->unsigned()->index();
+            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
+ 
+            $table->float('min_per');
+            $table->float('stu_per');
+            $table->string('status');
+            
             $table->timestamps();
         });
     }

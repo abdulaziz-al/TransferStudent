@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBackgroundsTable extends Migration
+class CreateLocationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateBackgroundsTable extends Migration
      */
     public function up()
     {
-        Schema::create('backgrounds', function (Blueprint $table) {
+        Schema::create('locations', function (Blueprint $table) {
             $table->engine = 'InnoDB';
 
             $table->increments('id');
-            $table->integer('stu_id')->unsigned()->index();
-            $table->foreign('stu_id')->references('id')->on('students')->onDelete('cascade');
-            $table->string('path');
- 
-
+            $table->string('branch');
+            $table->string('lives');
             
             $table->timestamps();
         });
@@ -34,6 +31,6 @@ class CreateBackgroundsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('backgrounds');
+        Schema::dropIfExists('locations');
     }
 }

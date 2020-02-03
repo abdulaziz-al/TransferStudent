@@ -14,7 +14,23 @@ class CreateStudentsTable extends Migration
     public function up()
     {
         Schema::create('students', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->engine = 'InnoDB';
+
+            $table->increments('id');
+            
+            $table->integer('stu_id')->unsigned()->index();
+            $table->foreign('stu_id')->references('id')->on('users')->onDelete('cascade');
+ 
+
+            $table->float('GPA');
+
+            
+            $table->integer('location_id')->unsigned()->index();
+            $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
+            $table->string('phone')->nullable();
+            $table->integer('background')->nullable();
+
+ 
             $table->timestamps();
         });
     }
