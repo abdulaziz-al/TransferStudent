@@ -22,6 +22,7 @@ class CreateDepartmentsTable extends Migration
             $table->float('weighted_of_background')->nullable();
             $table->float('weighted_for_another_branch')->nullable();
             $table->float('weighted_for_exam')->nullable();
+            $table->float('weighted_for_hours')->nullable();
             $table->integer('sites')->nullable();
             $table->string('note')->nullable();
             
