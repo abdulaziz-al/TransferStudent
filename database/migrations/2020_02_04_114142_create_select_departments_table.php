@@ -21,14 +21,14 @@ class CreateSelectDepartmentsTable extends Migration
             $table->integer('stu_id')->unsigned()->index();
             $table->foreign('stu_id')->references('id')->on('students')->onDelete('cascade');
             
-            $table->integer('department_id')->unsigned()->index();
-            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
+            $table->integer('department_id_1')->unsigned()->index();
+            $table->foreign('department_id_1')->references('id')->on('departments')->onDelete('cascade');
   
-            $table->integer('department_id')->unsigned()->index();
-            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
+            $table->integer('department_id_2')->unsigned()->index();
+            $table->foreign('department_id_2')->references('id')->on('departments')->onDelete('cascade');
   
-            $table->integer('department_id')->unsigned()->index();
-            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
+            $table->integer('department_id_3')->unsigned()->index();
+            $table->foreign('department_id_3')->references('id')->on('departments')->onDelete('cascade');
   
             
             
