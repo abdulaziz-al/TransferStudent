@@ -18,9 +18,8 @@ class CreateLocationsTable extends Migration
 
             $table->increments('id');
             $table->string('branch');
-            $table->string('lives');
+            $table->text('zones');
             
-            $table->timestamps();
         });
     }
 
