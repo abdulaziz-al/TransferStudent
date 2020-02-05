@@ -95,6 +95,11 @@
             </div>
         
             </div>
+            
+<canvas id="canvas">
+</canvas>
+
+
 
                 <main class="py-4">
                         
@@ -103,10 +108,6 @@
     
                 </main>
 
-                <canvas id="canvas">
-                </canvas>
-    
-            
 
 
 
