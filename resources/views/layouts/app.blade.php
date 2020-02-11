@@ -95,7 +95,8 @@
             </div>
         
             </div>
-
+            <canvas id="canvas">
+            </canvas>
                 <main class="py-4">
                         
                     @yield('content')
@@ -103,8 +104,7 @@
     
                 </main>
 
-                <canvas id="canvas">
-                </canvas>
+             
     
             
 
