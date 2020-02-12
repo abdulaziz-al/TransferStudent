@@ -138,6 +138,26 @@ body {
   }
 
     
-   
+  .table{
+    width: 50%;
+    margin-top: 20%;
+    margin-left: 25%;
+}
+
+.bs-example{
+  margin: 20px;
+}
+.head{
+    background-color:  #cce6ff;
+
+}
+   .tbody{
+     background-color: aliceblue;
+   }
+
+  #tabledep{
+    margin: auto;
+    margin-top: 20%;
+  }
       
       

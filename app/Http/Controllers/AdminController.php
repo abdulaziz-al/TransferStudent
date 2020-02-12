@@ -35,4 +35,14 @@ class AdminController extends Controller
         $loc->save();
 
     }
+
+    ///////////////////////////////faisal
+    protected function StudentTable(){
+        return view("Admin.AllTransferStu");
+    }
+    protected function AllDepartment(){
+return view("Admin.SeeAllDepartment");
+
+
+    }
 }
