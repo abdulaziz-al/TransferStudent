@@ -27,8 +27,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-/*     for Admin*/
+///////   for Admin
+
 Route::get('/setlocation','AdminController@location');
+Route::get('/setCourse','AdminController@stuCourse');
 Route::get('/stuset','AdminController@StuTable');
 
 Route::get('/transfer','AdminController@StudentTable');

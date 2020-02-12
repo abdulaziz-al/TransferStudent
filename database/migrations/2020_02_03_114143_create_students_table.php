@@ -29,6 +29,8 @@ class CreateStudentsTable extends Migration
             $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
             $table->string('phone')->nullable();
             $table->integer('background')->nullable();
+            $table->integer('department_id')->unsigned()->index();
+            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
 
  
             $table->timestamps();
