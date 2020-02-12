@@ -19,6 +19,8 @@ class CreateBackgroundsTable extends Migration
             $table->increments('id');
             $table->integer('stu_id')->unsigned()->index();
             $table->foreign('stu_id')->references('id')->on('students')->onDelete('cascade');
+            $table->boolean('seen')->nullable();
+            $table->boolean('status')->nullable();
             $table->string('path');
  
 

@@ -23,6 +23,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//////////////////////////////////////////////abdulaziz////////////////////////////
 
 Route::get('/setCourse','AdminController@stuCourse');
 Route::get('/stuset','AdminController@StuTable');
+Route::get('/passCourse','AdminController@passCourse');
+
+
+////////////////////////////////////////////////////////////////
