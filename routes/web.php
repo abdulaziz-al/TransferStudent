@@ -25,9 +25,18 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //////////////////////////////////////////////abdulaziz////////////////////////////
 
+
+
+
+///////   for Admin
+
+Route::get('/setlocation','AdminController@location');
 Route::get('/setCourse','AdminController@stuCourse');
 Route::get('/stuset','AdminController@StuTable');
 Route::get('/passCourse','AdminController@passCourse');
 
 
 ////////////////////////////////////////////////////////////////
+
+Route::get('/transfer','AdminController@StudentTable');
+Route::get('/alldep','AdminController@AllDepartment');

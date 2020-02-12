@@ -59,4 +59,13 @@ class AdminController extends Controller
     }
     ///////////////////////////////////////////////////////////abdulaziz///////////////////////
 
+    ///////////////////////////////faisal
+    protected function StudentTable(){
+        return view("Admin.AllTransferStu");
+    }
+    protected function AllDepartment(){
+return view("Admin.SeeAllDepartment");
+
+
+    }
 }

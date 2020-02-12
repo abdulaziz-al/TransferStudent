@@ -70,7 +70,7 @@ body {
     left: 0;
     right: 0;
     margin: auto;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     transition: transform 0.3s ease, opacity 0.1s ease 0.1s;
   }
   .menu span i:nth-child(1) {
@@ -117,7 +117,7 @@ body {
     position: absolute;
     width: 20px;
     height: 2px;
-    background: #ccc;
+    background: rgb(248, 81, 81);
     transition: all 0.3s ease;
   }
   .menu .menuContent ul li:before {
@@ -138,6 +138,26 @@ body {
   }
 
     
-   
+  .table{
+    width: 50%;
+    margin-top: 20%;
+    margin-left: 25%;
+}
+
+.bs-example{
+  margin: 20px;
+}
+.head{
+    background-color:  #cce6ff;
+
+}
+   .tbody{
+     background-color: aliceblue;
+   }
+
+  #tabledep{
+    margin: auto;
+    margin-top: 20%;
+  }
       
       
