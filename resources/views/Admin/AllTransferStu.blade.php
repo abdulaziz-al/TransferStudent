@@ -26,15 +26,7 @@
                 <td>clarkkent@mail.com</td>
                 <td>Accept</td>
                 
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>John</td>
-                <td>Carter</td>
-                <td>johncarter@mail.com</td>
-                <td>Reject</td>
-                
-            </tr>            
+            </tr>      
         </tbody>
     </table>
 </div>

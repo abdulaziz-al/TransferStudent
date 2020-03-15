@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Student;
 use App\Location;
+use App\Department;
+use App\Defualt;
+use Illuminate\Support\Facades\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Redirect;
 
 
 class AdminController extends Controller
@@ -39,11 +44,38 @@ class AdminController extends Controller
 
     ///////////////////////////////faisal
     protected function StudentTable(){
+     
+        
         return view("Admin.AllTransferStu");
     }
     protected function AllDepartment(){
-return view("Admin.SeeAllDepartment");
+            $department = Department::all();
 
+                return view("Admin.SeeAllDepartment")->with('department',$department);
+
+
+    }
+    protected function setdefault(Request $request){
+       /*   $messages=[
+              
+            'GPA.*'=>'wrong entry',
+            'Sets.*'=>'wrong entry',
+            
+
+          ];*/
+          $validator=Validator::make($request->all(),[
+            'GPA'=>'required|integer|max:50|min:10',              
+            'Sets'=>'required|integer|min:40',
+
+          ]);
+          if($validator->fails()){
+            return back()->with('error', $validator->messages()->all()[0])->withInput();
+        }
+          $default = new Defualt;
+          $default->GPA=$request->GPA;
+          $default->defualt_sites=$request->Sets;
+          $default->save();
+        return "seccuss";
 
     }
 }

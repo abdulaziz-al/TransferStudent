@@ -35,3 +35,4 @@ Route::get('/stuset','AdminController@StuTable');
 
 Route::get('/transfer','AdminController@StudentTable');
 Route::get('/alldep','AdminController@AllDepartment');
+Route::post('/sets','AdminController@setdefault')->name('setdefault');

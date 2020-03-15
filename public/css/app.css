@@ -59,7 +59,7 @@ body {
     position: absolute;
     right: 0;
     cursor: pointer;
-    background: rgba(182, 182, 182, 0);
+    background: rgba(20, 20, 20, 0);
     z-index: 1;
   }
   .menu span i {
@@ -70,7 +70,7 @@ body {
     left: 0;
     right: 0;
     margin: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     transition: transform 0.3s ease, opacity 0.1s ease 0.1s;
   }
   .menu span i:nth-child(1) {
@@ -138,7 +138,7 @@ body {
   }
 
     
-  .table{
+  #table{
     width: 50%;
     margin-top: 20%;
     margin-left: 25%;
@@ -156,8 +156,26 @@ body {
    }
 
   #tabledep{
-    margin: auto;
+    margin-left: 10%;
     margin-top: 20%;
   }
+  #formGPA{
+    margin-left: 10%;
+
+  }
       
+  .form-inline{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .form-inline input{
+
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
       
