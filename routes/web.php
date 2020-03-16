@@ -23,6 +23,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//////////////////////////////////////////////abdulaziz////////////////////////////
 
 
 
@@ -32,7 +33,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/setlocation','AdminController@location');
 Route::get('/setCourse','AdminController@stuCourse');
 Route::get('/stuset','AdminController@StuTable');
+Route::get('/passCourse','AdminController@passCourse');
+
+
+////////////////////////////////////////////////////////////////
 
 Route::get('/transfer','AdminController@StudentTable');
 Route::get('/alldep','AdminController@AllDepartment');
+<<<<<<< HEAD
 Route::post('/sets','AdminController@setdefault')->name('setdefault');
+=======
+>>>>>>> 87aa594aea5cb2b4009aea26434efe13004da91e
