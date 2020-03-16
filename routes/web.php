@@ -44,3 +44,7 @@ Route::get('/setdepartment','AdminController@HeadOfDepartment');
 
 Route::get('/transfer','AdminController@StudentTable');
 Route::get('/alldep','AdminController@AllDepartment');
+<<<<<<< HEAD
+Route::post('/sets','AdminController@setdefault')->name('setdefault');
+=======
+>>>>>>> 87aa594aea5cb2b4009aea26434efe13004da91e
