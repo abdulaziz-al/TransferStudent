@@ -98,6 +98,7 @@ class AdminController extends Controller
         return view("Admin.AllTransferStu");
     }
     protected function AllDepartment(){
+
             $department = Department::all();
 
                 return view("Admin.SeeAllDepartment")->with('department',$department);
@@ -107,19 +108,27 @@ class AdminController extends Controller
     protected function setdefault(Request $request){
           $messages=[
               
-            'GPA.*'=>'wrong entry',
-            'Sets.*'=>'wrong entry',
+            'GPA.required'=>'GPA wrong entry',
+            'Sets.*'=>'Sets wrong entry',
+            'GPA.max'=>'GPA must be under 50',
+
             
 
           ];
-          $validator=Validator::make($request->all(),[
+         // return back()->with('success', 'Login Successfully!');
+
+
+          $validator = Validator::make($request->all(), [
             'GPA'=>'required|integer|max:50|min:10',              
             'Sets'=>'required|integer|min:40',
 
-          ]);
-          if($validator->fails()){
-            return back()->with('error', $validator->messages()->all()[0])->withInput();
+          ],$messages);
+          if ($validator->fails()) {
+            return back()->with('toast_error',  $validator->messages()->all())->withInput();
+
         }
+
+
           $default = new Defualt;
           $default->GPA=$request->GPA;
           $default->defualt_sites=$request->Sets;
