@@ -6,23 +6,14 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Student;
 use App\Location;
-<<<<<<< HEAD
 use App\Department;
 use App\Defualt;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Redirect;
 
-=======
 use App\PassCourse;
 use App\Course;
-<<<<<<< HEAD
-use App\Head;
-use App\HeadOfDepartment;
-use App\Department;
-=======
->>>>>>> 87aa594aea5cb2b4009aea26434efe13004da91e
->>>>>>> 3dceac1796e949062b835dc016f88533179c93c9
 
 class AdminController extends Controller
 {
@@ -114,13 +105,13 @@ class AdminController extends Controller
 
     }
     protected function setdefault(Request $request){
-       /*   $messages=[
+          $messages=[
               
             'GPA.*'=>'wrong entry',
             'Sets.*'=>'wrong entry',
             
 
-          ];*/
+          ];
           $validator=Validator::make($request->all(),[
             'GPA'=>'required|integer|max:50|min:10',              
             'Sets'=>'required|integer|min:40',
