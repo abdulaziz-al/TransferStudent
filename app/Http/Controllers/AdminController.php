@@ -8,6 +8,9 @@ use App\Student;
 use App\Location;
 use App\PassCourse;
 use App\Course;
+use App\Head;
+use App\HeadOfDepartment;
+use App\Department;
 
 class AdminController extends Controller
 {
@@ -27,9 +30,35 @@ class AdminController extends Controller
             $stu->save();
 
         }
+    }
+    protected function Head(){
+        // function for Head of each departments to give them a department 
+        $head = User::all();
+        for ($i=1; $i <=  $head->count(); $i++) {
+            $user = User::find($i);
+            if($user->role_id == 2 ){
+            $headDP = new Head;
+            $headDP->head_id = $user->id;
+            $headDP->save();
+            }
+        }
 
-        
 
+    }
+    protected function HeadOfDepartment(){
+        $head = Head::all();
+        $num = 128 ;
+        $Dpartment = Department::all();
+        for($i= 1  ; $i <= 4; $i++){
+            
+            $h = Head::find($num)->first();
+            $d = Department::find($i)->first();
+            $HOD = new HeadOfDepartment;
+            $HOD->head_id = $h->id ;
+            $HOD->department_id = $d->id;
+            $HOD->save();
+            $num++ ; 
+        }
     }
     protected function stuCourse(){
         // function for location 
