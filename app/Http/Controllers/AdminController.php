@@ -6,17 +6,14 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Student;
 use App\Location;
-<<<<<<< HEAD
 use App\Department;
 use App\Defualt;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Redirect;
 
-=======
 use App\PassCourse;
 use App\Course;
->>>>>>> 87aa594aea5cb2b4009aea26434efe13004da91e
 
 class AdminController extends Controller
 {
@@ -44,7 +41,7 @@ class AdminController extends Controller
         // function for location 
         $loc = new Location; 
         $loc->branch = 'العابدية';
-        $loc->zones = 'العوالي';
+        $loc->zones = 'العوالي'; 
         $loc->save();
 
     }
