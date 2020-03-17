@@ -34,6 +34,10 @@ Route::get('/setlocation','AdminController@location');
 Route::get('/setCourse','AdminController@stuCourse');
 Route::get('/stuset','AdminController@StuTable');
 Route::get('/passCourse','AdminController@passCourse');
+Route::get('/sethead','AdminController@Head');
+Route::get('/setdepartment','AdminController@HeadOfDepartment');
+
+
 
 
 ////////////////////////////////////////////////////////////////
