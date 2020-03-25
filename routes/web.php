@@ -30,18 +30,32 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 ///////   for Admin
 
-Route::get('/setlocation','AdminController@location');
-Route::get('/setCourse','AdminController@stuCourse');
-Route::get('/stuset','AdminController@StuTable');
-Route::get('/passCourse','AdminController@passCourse');
-Route::get('/sethead','AdminController@Head');
-Route::get('/setdepartment','AdminController@HeadOfDepartment');
+Route::get('/setlocation', 'AdminController@location');
+Route::get('/setCourse', 'AdminController@stuCourse');
+Route::get('/stuset', 'AdminController@StuTable');
+Route::get('/passCourse', 'AdminController@passCourse');
+Route::get('/sethead', 'AdminController@Head');
+Route::get('/setdepartment', 'AdminController@HeadOfDepartment');
 
 
 
 
 ////////////////////////////////////////////////////////////////
 
-Route::get('/transfer','AdminController@StudentTable');
-Route::get('/alldep','AdminController@AllDepartment');
-Route::post('/sets','AdminController@setdefault')->name('setdefault');
+Route::get('/transfer', 'AdminController@StudentTable');
+Route::get('/alldep', 'AdminController@AllDepartment');
+Route::post('/sets', 'AdminController@setdefault')->name('setdefault');
+
+
+Route::get('/calculateweight', 'AdminController@calculateweight');
+
+Route::get('/setweighted', 'AdminController@setweighted')->name('setweighted');
+
+
+
+
+/////////////////student//////
+Route::get('/setbackground','StuController@setbackground')->name('setbackground');
+
+//////////head//////
+Route::get('/showbackground','HeadController@showBackground')->name('showBackground');
