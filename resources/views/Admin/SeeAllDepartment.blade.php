@@ -1,6 +1,9 @@
 @extends('layouts.app')
-
+@section('iconTitil')
+    All Department 
+@endsection
 @section('content')
+
 
 
 <div class="container">
@@ -42,12 +45,40 @@
         </tbody>
     </table>
     <hr>
-    <form class="form-inline" id="formGPA" method="POST" action="{{ route('setdefault') }}" enctype="multipart/form-data"  >
-        @csrf
-            <input type=" text" placeholder="GPA" name="GPA" >  
-            <input type=" text" placeholder="Sets" name="Sets" >
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="btnmodel">set GPA and sets</button>
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">default GPA and Sets</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="form-inline" id="formGPA" method="POST" action="{{ route('setdefault') }}" enctype="multipart/form-data" >
+                @csrf
+
+              <div class="form-group">
+                <label class="col-form-label">GPA</label>
+                <input type=" text" placeholder="GPA" name="GPA" >  
+            </div>
+              <div class="form-group">
+                <label  class="col-form-label">sets</label>
+                <input type=" text" placeholder="Sets" name="Sets" >
+            </div>
             <input type="submit" class="btn btn-primary" value="set">
+
         </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
 
 </div>
 </div>

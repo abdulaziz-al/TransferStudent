@@ -69,7 +69,58 @@ class HeadController extends Controller
 
     }
 
-    protected function setWieght(Request $request)
+    protected function setweighted(Request $request)
     {
+        $messages = [
+
+            'Sets.*' => 'Sets wrong entry',
+            'Sets.*' => 'Sets wrong entry',
+            'Sets.*' => 'Sets wrong entry',
+            'Sets.*' => 'Sets wrong entry',
+            'Sets.*' => 'Sets wrong entry',
+
+
+
+        ];
+        // return back()->with('success', 'Login Successfully!');
+
+
+        $validator = Validator::make($request->all(), [
+            'GPA' => 'required|integer|max:50|min:10',
+            'Sets' => 'required|integer|min:40',
+
+        ], $messages);
+        if ($validator->fails()) {
+            return back()->with('toast_error',  $validator->messages()->all())->withInput();
+        }
+
+        // if new 
+
+
+        
+
     }
+
+    protected function ProfileHead(){
+        $head = Head::where('id',128)->first();
+        $user = User::where('id',$head->head_id)->first();
+        $HoD = HeadOfDepartment::where('head_id',$head->id)->first();
+        $department  = Department::where('id',$HoD->department_id)->first();
+
+        $arr = Array('head'=>$head, 'user'=>$user , 'department'=>$department);
+
+        return view('HeadOfDepartment.info', $arr );
+
+    }
+    protected function Department(){
+        $head = Head::where('id',128)->first();
+        $HoD = HeadOfDepartment::where('head_id',$head->id)->first();
+        $department  = Department::where('id',$HoD->department_id)->first();
+
+
+        $arr = Array('head'=>$head, 'department'=>$department);
+
+        return view('HeadOfDepartment.SitsAndWieghtedAndNote', $arr );
+    }
+    
 }

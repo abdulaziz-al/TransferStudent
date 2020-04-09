@@ -49,13 +49,23 @@ Route::post('/sets', 'AdminController@setdefault')->name('setdefault');
 
 Route::get('/calculateweight', 'AdminController@calculateweight');
 
-Route::get('/setweighted', 'AdminController@setweighted')->name('setweighted');
 
 
 
 
 /////////////////student//////
-Route::get('/setbackground','StuController@setbackground')->name('setbackground');
+Route::get('/setbackground', 'StuController@setbackground')->name('setbackground');
+Route::get('/profile','StuController@ProfileHead');
+Route::get('/background','StuController@showBG');
+
+
 
 //////////head//////
-Route::get('/showbackground','HeadController@showBackground')->name('showBackground');
+Route::get('/showbackground', 'HeadController@showBackground')->name('showBackground');
+Route::get('/info','HeadController@ProfileHead');
+Route::get('/department','HeadController@Department');
+Route::get('/setweighted', 'HeadController@setweighted')->name('setweighted');
+
+
+
+

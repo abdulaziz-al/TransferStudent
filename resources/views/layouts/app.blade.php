@@ -34,14 +34,23 @@
 
     
             <div class="container">
-            
+              
+                <nav id="nav">
+                    <div class="innertube">
+                        <img src="/image/uqu.png" id="uquimage" alt="#">
                 
-                <div class='menu'>
                     
+            </div>
+            </nav>
+            
+                <div class='menu'>
+                   
                     <span class='toggle'>
+                        
+                        <i>@yield('iconTitil') </i>
                         <i></i>
                         <i></i>
-                        <i></i>
+                        
                         
                       </span>
                 
@@ -82,7 +91,9 @@
                     </ul>
                 </div>
             </div>
-        
+            
+            
+            
             </div>
          
 
@@ -106,7 +117,26 @@
 });
   
 </script>
-    
+
+<script>
+
+    $(document).ready(function() {
+        for(var $i = 0 ; $i <= 5 ; $i++){
+
+const $valueSpan = $(".valueSpan"+$i);
+const $value = $('#slider'+$i);
+$valueSpan.html($value.val());
+$value.on('input change', () => {
+
+$valueSpan.html($value.val())
+});
+}
+});
+
+
+</script>
+
          
 </body>
 </html>
+#

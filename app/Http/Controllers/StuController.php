@@ -35,6 +35,29 @@ class StuController extends Controller
 
         
         return "Good";
+
     }
+
+
+    protected function ProfileHead(){
+        $stu = Student::where('id',302)->first();
+        $user = User::where('id',$stu->stu_id)->first();
+        $location=Location::where('id',$stu->location_id)->first();
+        $department  = Department::where('id',$stu->department_id)->first();
+        
+        $arr = Array('stu'=>$stu, 'user'=>$user , 'department'=>$department , 'location'=>$location);
+
+        return view('student.profile', $arr );
+
+    }
+    protected function showBG (){
+        $stu = Student::where('id',302)->first();
+        $background =Background::where('stu_id', $stu->id)->get();
+
+
+        return $background;
+
+
+    } 
     }
 
