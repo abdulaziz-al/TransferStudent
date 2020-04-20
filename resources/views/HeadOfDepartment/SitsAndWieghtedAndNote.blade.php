@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+  My Depratment 
+@endsection
 @section('content')
 
 <div class="container">
@@ -17,15 +20,15 @@
 </label>
     
   </div>
-  <form class="form-inline" id="formGPA" method="POST" action="{{ route('setweighted') }}" enctype="multipart/form-data"  >
-    @csrf 
+
     <div class="card-body">
-       
+      <form class="form-inline" id="formGPA" method="POST" action="{{ route('department') }}"  enctype="multipart/form-data" >
+        @csrf 
             
           <div class="d-flex justify-content-center my-4">
             <label>
                Location:
-              <input id="slider1" class="border-0" type="range" min="0" max="50" name="location" value={{$department->weighted_of_location}} />
+              <input id="slider1" class="border-0" type="range" min="0" max="50" name="location" value={{$department->weighted_of_location}}  />
             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan1"></span>
           </label>
           </div>
@@ -58,18 +61,29 @@
             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan5"></span>
           </label>
 
-          </div>             
+          </div>  
+          <div class="d-flex justify-content-center my-4">
+            <label>sits:
+          <input type="number" name="sit" min="0"  step="1"/>
+        </label>
 
+      </div>  
+          <div class="d-flex justify-content-center my-4">
+            <div class="form-group shadow-textarea">
+            <textarea name="note" id="notes" cols="25" rows="5"  placeholder="Wirte a note while you don't using  all 50%.... "></textarea>
+            </div>
+          </div>
+           
+          <input type="submit"  value="Submit"/>        
+
+        </form>
     </div>
-    <div class="card-footer">
-    <input type="submit"  value="Submit"/>        
-  </div>
-
-  </form>
+      
+    </div>
+    
 </div>
 </div>
 
 </div>
 
-</div>
     @endsection

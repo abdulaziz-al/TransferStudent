@@ -12,16 +12,12 @@
 
     
 body {
-    background-image:url(321.PNG);
       font-family: 'Roboto Condensed', sans-serif;  
     font-size: 16px;
-      overflow: hidden;
-      text-transform: uppercase;
+    overflow: scroll;
+    text-transform: uppercase;
       font-weight: bold;
-      letter-spacing: 1px;
       height: 100vh;
-      background-size: cover;
-      background-position: center;
   }
   .menu {
     height: 70px;
@@ -29,7 +25,7 @@ body {
     left: 70px;
     top: 0px;
     text-align: center;
-    position: absolute;
+    position: fixed;
     background: rgba(255, 255, 255, 0);
     overflow: hidden;
     transition: all 0.2s ease;
@@ -144,76 +140,154 @@ body {
     opacity: 0;
     right: 0;
     margin: auto;
-    
-  }
+      
+    }
 
-    
-  #table{
+      
+    #table{
+      width: 50%;
+      margin-top: 10%;
+      margin-left: 25%;
+  }
+  
+  #tables{
     width: 50%;
-    margin-top: 20%;
+    margin-top: 5%;
     margin-left: 25%;
 }
 
-.bs-example{
-  margin: 20px;
-}
-.head{
-    background-color:  #cce6ff;
-
-}
-   .tbody{
-     background-color: aliceblue;
-   }
-
-  #tabledep{
-    margin-left: 10%;
-    margin-top: 20%;
-  }
-  #formGPA{
-    margin-left: 10%;
+  #table1{
+    
+    width: 50%;
+    margin-top: 30%;
+    margin-left: 25%;
 
   }
-      
-  .form-inline{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-  }
 
-  .form-inline input{
+  #table2{
+    
+    width: 50%;
+    margin-top: -43%;
+    margin-left: 95%;
+    
 
-    vertical-align: middle;
-    margin: 5px 10px 5px 0;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-  }
-
-  #btnmodel{
-    margin-left: 10%;
-
-  }
-     /*  */ 
-		.innertube {
-			margin: 15px; /* Provides padding for the content */
     }
-    #nav {
-			position: absolute; 
-			top: 0;
-			bottom: 0;
-			left: 0; 
-			width: 230px;
-			overflow: auto; /* Scrollbars will appear on this frame only when there's enough content to require scrolling. To disable scrollbars, change to "hidden", or use "scroll" to enable permanent scrollbars */
-			background: rgb(227, 255, 176); 		
+    .tab-btn{margin: 50px;}
+
+
+
+  .bs-example{
+    margin: 20px;
+  }
+  .head{
+    background-color:rgb(225, 233, 210) ;
+
+  }
+    .tbody{
+      background-color: rgb(255, 255, 255);
     }
-    #cardd{
-      margin-top: 30%;
-      left: 50%;
-      background-color:rgb(225, 233, 210) ;
+
+    #tabledep{
+      margin-left: 10%;
+      margin-top: 20%;
     }
-      #uquimage{
-        width: 160%;
+    #formGPA{
+      margin-left: 10%;
+
+    }
+        
+    .form-inline{
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+    }
+
+    .form-inline input{
+
+      vertical-align: middle;
+      margin: 5px 10px 5px 0;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+    #btnmodel{
+      margin-left: 10%;
+
+    }
+      /*  */ 
+      .innertube {
+        margin: 15px; /* Provides padding for the content */
+        
+      }
+      #nav {
+        position: fixed; 
+        top: 0;
+        bottom: 0;
+        left: 0; 
+        width: 230px;
+        overflow: auto; /* Scrollbars will appear on this frame only when there's enough content to require scrolling. To disable scrollbars, change to "hidden", or use "scroll" to enable permanent scrollbars */
+        background: rgb(227, 255, 176); 		
+      }
+      #cardd{
+        margin-top: 30%;
+        left: 50%;
+        background-color:rgb(225, 233, 210) ;
+      }
+        #uquimage{
+          width: 250px;
         margin-top: 95%;
-        margin-left: -30%;
+          margin-left: -20%;
+
+      } 
+
+      .fileContainer {
+        overflow: hidden;
+        position: relative;
     }
+    
+    .fileContainer [type=file] {
+        cursor: inherit;
+        display: block;
+        font-size: 999px;
+        filter: alpha(opacity=0);
+        min-height: 100%;
+        min-width: 100%;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        top: 0;
+    }
+      .hh{
+        font-style: inherit;
+        font-family: fantasy;
+        font:bold:
+        
+        
+      }
+      
+input[type=submit]:hover {
+  background-color:#BCCE98;
+}
+
+     
+input[type=submit] {
+  background-color:rgb(227, 255, 176);
+  color: black;
+}
+
+button:hover{
+  background-color:#BCCE98;
+}
+.la{
+  text-align: center;
+  margin-top: 10%;
+}
+
+.sub{
+  margin-top: 10%;
+  margin-left: 20%;
+ 
+}
 		

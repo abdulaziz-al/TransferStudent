@@ -1,13 +1,11 @@
 @extends('layouts.app')
+@section('title')
+   Profile 
+@endsection
 @section('content')
 
 
-<!-- 
-الاسم 
-الايميل 
-رقم الجوال 
-رئيس قسم ايش/ القسم بنسبة للطالب 
--->
+
 
 <div class="container">
     <div class="row">

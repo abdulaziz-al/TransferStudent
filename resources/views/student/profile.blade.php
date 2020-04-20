@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+   Student Profile  
+@endsection
 @section('content')
 
 
@@ -33,6 +36,23 @@
         <a href="#" class="btn btn-primary" style="margin: auto">Edit</a>
     
       </div>
+
+
+      <form class="form-inline" id="formGPA" method="POST" action="{{ route('setbackground') }}"  enctype="multipart/form-data" >
+        @csrf 
+
+        <label >Add Background :     </label>
+
+            <input type="file" name="file"  />
+
+        <input type="submit" value="Submit"/>        
+
+    </form>
+            
+      
+      
+
+
 
 
 

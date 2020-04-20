@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('iconTitil')
-    All Department 
+@section('title')
+   Wieghted of All Departments
 @endsection
 @section('content')
 
